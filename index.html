@@ -2,30 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ExamStay - Less Stress, More Success</title>
-  <link rel="stylesheet" href="style.css" />
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f2f2f2;
+      background-color: #f9f9f9;
       text-align: center;
     }
     header {
-      background-color: #007bff;
-      padding: 1rem;
+      background-color: #3a7bd5;
       color: white;
+      padding: 20px 10px;
     }
     .logo {
-      max-width: 150px;
-      margin-top: 1rem;
+      width: 120px;
+      margin-top: 10px;
     }
     .poster-img {
-      max-width: 90%;
-      margin: 2rem 0;
-      border-radius: 10px;
+      width: 90%;
+      max-width: 400px;
+      margin: 20px auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .content {
+      padding: 20px;
+    }
+    .founder {
+      margin-top: 30px;
+      font-weight: bold;
+      color: #333;
     }
     .whatsapp-float {
       position: fixed;
@@ -34,29 +43,29 @@
       z-index: 100;
     }
     .whatsapp-float img {
-      width: 50px;
-      height: 50px;
+      width: 55px;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>ExamStay</h1>
-    <p>Less Stress, More Success</p>
+    <h1>Welcome to ExamStay</h1>
     <img src="logo.png" alt="ExamStay Logo" class="logo" />
+    <p>Less Stress, More Success</p>
   </header>
 
-  <main>
+  <div class="content">
     <img src="poster.png" alt="ExamStay Poster" class="poster-img" />
-    <p>Helping students find a safe and affordable stay near their exam centers.</p>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeFBl1BJkSTJrs3wsbe9UJ50-f_qWBa-jEPEnbj4RHd_69eLQ/viewform?usp=sf_link" target="_blank">
-      👉 Book Your Stay Now
-    </a>
-  </main>
+    <h2>Stay Tension-Free During Your Exams</h2>
+    <p>We help students find short-term stays near exam centers. Trusted by many, starting from Indore.</p>
 
-  <!-- WhatsApp Floating Button -->
+    <div class="founder">Founder: Sanjay & Sanjay</div>
+  </div>
+
   <a href="https://wa.me/919589693356" target="_blank" class="whatsapp-float">
-    <img src="https://img.icons8.com/ios-filled/50/25D366/whatsapp.png" alt="WhatsApp" />
+    <img src="https://img.icons8.com/ios-filled/100/25D366/whatsapp.png" alt="WhatsApp" />
   </a>
+
 </body>
 </html>
