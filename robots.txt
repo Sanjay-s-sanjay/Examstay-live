@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sanjay-s-sanjay.github.io/Examstay-live/sitemap.xml
