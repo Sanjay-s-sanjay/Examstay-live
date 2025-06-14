@@ -3,38 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ExamStay - Less Stress, More Success</title>
+  <title>ExamStay – Less Stress, More Success</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
+      background: #f0f8ff;
       text-align: center;
+      padding-bottom: 80px;
     }
     header {
-      background-color: #3a7bd5;
+      background-color: #0077b6;
       color: white;
-      padding: 20px 10px;
+      padding: 20px;
     }
     .logo {
-      width: 120px;
-      margin-top: 10px;
+      max-width: 120px;
+      margin-bottom: 10px;
+    }
+    h1 {
+      margin: 10px 0;
     }
     .poster-img {
       width: 90%;
-      max-width: 400px;
+      max-width: 500px;
       margin: 20px auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
     }
-    .content {
-      padding: 20px;
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      background-color: #00b4d8;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 30px;
     }
     .founder {
       margin-top: 30px;
-      font-weight: bold;
-      color: #333;
+      color: #555;
+      font-size: 16px;
     }
     .whatsapp-float {
       position: fixed;
@@ -50,21 +60,25 @@
 <body>
 
   <header>
-    <h1>Welcome to ExamStay</h1>
     <img src="logo.png" alt="ExamStay Logo" class="logo" />
+    <h1>Welcome to ExamStay</h1>
     <p>Less Stress, More Success</p>
   </header>
 
-  <div class="content">
-    <img src="poster.png" alt="ExamStay Poster" class="poster-img" />
-    <h2>Stay Tension-Free During Your Exams</h2>
-    <p>We help students find short-term stays near exam centers. Trusted by many, starting from Indore.</p>
+  <img src="poster.png" alt="ExamStay Poster" class="poster-img" />
 
-    <div class="founder">Founder: Sanjay & Sanjay</div>
+  <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeFBl1BJkSTJrs3wsbe9UJ50-f_qWBa-jEPEnbj4RHd_69eLQ/viewform?usp=pp_url" target="_blank">
+    Book Now
+  </a>
+
+  <div class="founder">
+    <p><strong>Founder:</strong> Sanjay & Sanjay</p>
+    <p>Providing comfortable stays near your exam centers</p>
   </div>
 
+  <!-- WhatsApp Chat Button -->
   <a href="https://wa.me/919589693356" target="_blank" class="whatsapp-float">
-    <img src="https://img.icons8.com/ios-filled/100/25D366/whatsapp.png" alt="WhatsApp" />
+    <img src="https://img.icons8.com/ios-filled/50/25D366/whatsapp.png" alt="WhatsApp Chat" />
   </a>
 
 </body>
