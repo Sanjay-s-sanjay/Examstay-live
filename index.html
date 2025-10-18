@@ -14,7 +14,7 @@
       font-family: 'Poppins', sans-serif;
       margin: 0;
       padding-bottom: 80px;
-      background-image: url("Study-room.jpg"); /* background image */
+      background-image: url("Study-room.jpg");
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -35,10 +35,13 @@
       z-index: -1;
     }
 
+    /* Header */
     header {
-      background-color: rgba(0, 119, 182, 0.85); /* semi-transparent for overlay effect */
+      background-color: rgba(0, 119, 182, 0.85);
       color: white;
       padding: 20px;
+      position: relative;
+      z-index: 2;
     }
 
     .logo {
@@ -55,7 +58,9 @@
       max-width: 500px;
       margin: 20px auto;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      position: relative;
+      z-index: 2;
     }
 
     .btn {
@@ -67,14 +72,24 @@
       text-decoration: none;
       font-size: 18px;
       border-radius: 30px;
+      position: relative;
+      z-index: 2;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #0077b6;
     }
 
     .founder {
       margin-top: 30px;
       color: #f0f0f0;
       font-size: 16px;
+      position: relative;
+      z-index: 2;
     }
 
+    /* Floating WhatsApp Button */
     .whatsapp-float {
       position: fixed;
       bottom: 20px;
@@ -86,9 +101,12 @@
       width: 55px;
     }
 
+    /* Footer */
     footer {
       margin-top: 40px;
       color: #f0f0f0;
+      position: relative;
+      z-index: 2;
     }
 
     footer a {
@@ -97,13 +115,51 @@
       margin: 0 5px;
     }
 
-    /* Responsive hero */
+    /* Highlighted CTA Banner */
+    .cta-banner {
+      background-color: rgba(0, 180, 216, 0.9);
+      padding: 20px;
+      border-radius: 15px;
+      margin: 30px auto;
+      max-width: 600px;
+      font-size: 1.2rem;
+      color: white;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      position: relative;
+      z-index: 2;
+    }
+
+    .cta-banner a {
+      display: inline-block;
+      margin-top: 10px;
+      background-color: #fff;
+      color: #00b4d8;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .cta-banner a:hover {
+      background-color: #f0f0f0;
+    }
+
+    /* Responsive */
     @media (max-width: 768px) {
       .poster-img {
         max-width: 90%;
       }
       h1 {
         font-size: 2rem;
+      }
+      .cta-banner {
+        font-size: 1rem;
+        padding: 15px;
+      }
+      .cta-banner a {
+        padding: 8px 16px;
       }
     }
   </style>
@@ -125,6 +181,12 @@
   <div class="founder">
     <p><strong>Founder:</strong> Sanjay & Sanjay</p>
     <p>Providing comfortable stays near your exam centers</p>
+  </div>
+
+  <!-- Highlighted CTA Banner -->
+  <div class="cta-banner">
+    Need Help Booking? <br>
+    <a href="https://wa.me/919589693356" target="_blank">Chat on WhatsApp</a>
   </div>
 
   <!-- WhatsApp Chat Button -->
