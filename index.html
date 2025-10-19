@@ -68,9 +68,15 @@ footer { text-align:center; margin-top:50px; padding:15px; background: rgba(0,26
 footer a { color:#DAA520; text-decoration:none; margin:0 5px; }
 footer a:hover { color:white; }
 
+/* Social Media Icons */
+.social-icons { margin-top:10px; }
+.social-icons a { margin:0 8px; display:inline-block; transition:0.3s; }
+.social-icons a img { width:28px; }
+.social-icons a:hover img { transform:scale(1.1); }
+
 /* WhatsApp Floating */
 .whatsapp-float { position:fixed; bottom:20px; right:20px; z-index:150; }
-.whatsapp-float img { width:60px; }
+.whatsapp-float img { width:60px; filter: drop-shadow(0 0 5px black); }
 
 /* Responsive */
 @media(max-width:768px){ .hero h1{ font-size:2.2rem; } .hero p{ font-size:1.1rem; } .poster-img{ max-width:90%; } .room-cards { grid-template-columns:1fr; } .area-list { text-align:center; } }
@@ -135,43 +141,4 @@ footer a:hover { color:white; }
 <section id="rooms">
   <h2>Our Rooms & Facilities</h2>
   <div class="room-cards">
-    <div class="room-card"><img src="https://img.icons8.com/ios-filled/50/DAA520/bed.png" alt="Single Room"><h3>Single Room</h3><p>Private bed, study desk, clean environment. Available Now.</p></div>
-    <div class="room-card"><img src="share-room.jpg" alt="Shared Room"><h3>Shared Room</h3><p>Shared space with comfort and Wi-Fi. Available Now.</p></div>
-    <div class="room-card"><img src="https://img.icons8.com/ios-filled/50/DAA520/wifi.png" alt="Wi-Fi"><h3>High-Speed Wi-Fi</h3><p>Stay connected anytime. Study efficiently. Available Now.</p></div>
-    <div class="room-card"><img src="locker.jpg" alt="Locker"><h3>Safe Lockers</h3><p>Keep your belongings secure. Available Now.</p></div>
-  </div>
-  <!-- Testimonials -->
-  <div class="testimonials">
-    <div class="testimonial active"><p>"ExamStay made my exam stay stress-free and comfortable!"</p><strong>- Rahul S.</strong></div>
-    <div class="testimonial"><p>"Friendly staff, clean rooms, and excellent location."</p><strong>- Priya M.</strong></div>
-    <div class="testimonial"><p>"Affordable stay near my exam center. Highly recommended!"</p><strong>- Ankit R.</strong></div>
-  </div>
-</section>
-
-<!-- Trust & Policies -->
-<section id="trust-policies">
-  <h2>Our Trust & Policies</h2>
-  <div class="room-cards">
-    <div class="room-card"><h3>Privacy Policy</h3><p>We respect your privacy. Your data is safe and never shared with third parties.</p></div>
-    <div class="room-card"><h3>Refund & Cancellation</h3><p>Flexible refund and cancellation policy. Full details available on request.</p></div>
-    <div class="room-card"><h3>Safety & Trust</h3><p>All stays are verified, and student safety is our top priority.</p></div>
-  </div>
-</section>
-
-<!-- CTA Banner -->
-<section class="cta-banner">
-  Book your seat now and ensure a stress-free exam experience! 
-  <br>
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLSeFBl1BJkSTJrs3wsbe9UJ50-f_qWBa-jEPEnbj4RHd_69eLQ/viewform?usp=pp_url" target="_blank">Book Now</a>
-</section>
-
-<!-- Founder -->
-<section id="founder">
-  <h2>Meet the Founders</h2>
-  <p><strong>Founders:</strong> Sanjay & Sanjay</p>
-</section>
-
-<!-- Contact -->
-<section id="contact">
-  <h2>Contact Us</h2>
-  <p>WhatsApp: <a href="https://wa
+    <div class="room-card"><img src="https://img
