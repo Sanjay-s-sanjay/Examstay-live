@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ExamStay – Less Stress, More Success</title>
-
 <meta name="description" content="ExamStay provides safe, affordable stays near exam centers. Less Stress, More Success.">
 <meta name="keywords" content="ExamStay, student stay, host rooms, exam accommodation, safe stay">
 
@@ -76,12 +75,11 @@ footer a:hover { color:white; }
 @media(max-width:768px){ .hero h1{ font-size:2.2rem; } .hero p{ font-size:1.1rem; } .poster-img{ max-width:90%; } .room-cards { grid-template-columns:1fr; } }
 </style>
 </head>
-
 <body>
 
 <!-- Navbar -->
 <nav>
-  <img src="logo1.png" alt="ExamStay Logo" class="logo">
+  <img src="https://via.placeholder.com/80" alt="ExamStay Logo" class="logo">
   <ul>
     <li><a href="#home" class="nav-link active">Home</a></li>
     <li><a href="#about" class="nav-link">About</a></li>
@@ -94,7 +92,7 @@ footer a:hover { color:white; }
 <section class="hero" id="home">
   <h1>Welcome to <span>ExamStay</span></h1>
   <p>Less Stress, More Success</p>
-  <img src="study-room.jpg" alt="Student study room" class="poster-img" loading="lazy">
+  <img src="https://via.placeholder.com/450x250" alt="Student study room" class="poster-img" loading="lazy">
   <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeFBl1BJkSTJrs3wsbe9UJ50-f_qWBa-jEPEnbj4RHd_69eLQ/viewform?usp=pp_url" target="_blank">Book Now</a>
   <div class="founder">
     <p><strong>Founder:</strong> Sanjay & Sanjay</p>
@@ -143,3 +141,78 @@ footer a:hover { color:white; }
       <p>"Friendly staff, clean rooms, and excellent location."</p>
       <strong>- Priya M.</strong>
     </div>
+    <div class="testimonial">
+      <p>"Affordable stay near my exam center. Highly recommended!"</p>
+      <strong>- Ankit R.</strong>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Banner -->
+<section class="cta-banner">
+  Book your seat now and ensure a stress-free exam experience! 
+  <br>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSeFBl1BJkSTJrs3wsbe9UJ50-f_qWBa-jEPEnbj4RHd_69eLQ/viewform?usp=pp_url" target="_blank">Book Now</a>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>WhatsApp: <a href="https://wa.me/9589693356" style="color:#DAA520;">9589693356</a></p>
+  <p>Email: <a href="mailto:siloriyasanjay123@gmail.com" style="color:#DAA520;">siloriyasanjay123@gmail.com</a></p>
+  <p>Website: <a href="https://sanjay-s-sanjay.github.io/Examstay-live/" style="color:#DAA520;">ExamStay Live</a></p>
+</section>
+
+<!-- WhatsApp Floating -->
+<a href="https://wa.me/9589693356" class="whatsapp-float" target="_blank">
+  <img src="https://img.icons8.com/color/96/000000/whatsapp.png" alt="WhatsApp Contact">
+</a>
+
+<!-- Footer -->
+<footer>
+  &copy; 2025 ExamStay | All rights reserved. 
+  <br>
+  <a href="https://sanjay-s-sanjay.github.io/Examstay-live/">Website</a> | 
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSeFBl1BJkSTJrs3wsbe9UJ50-f_qWBa-jEPEnbj4RHd_69eLQ/viewform?usp=pp_url">Book Now</a>
+</footer>
+
+<script>
+// Hero & Sections reveal on scroll
+const hero = document.querySelector('.hero');
+const sections = document.querySelectorAll('section');
+window.addEventListener('scroll', () => {
+  const triggerBottom = window.innerHeight / 1.2;
+
+  const heroTop = hero.getBoundingClientRect().top;
+  if(heroTop < triggerBottom) hero.classList.add('visible');
+
+  sections.forEach(section => {
+    const top = section.getBoundingClientRect().top;
+    if(top < triggerBottom) section.classList.add('visible');
+  });
+});
+
+// Testimonial slider
+let current = 0;
+const testimonials = document.querySelectorAll('.testimonial');
+setInterval(() => {
+  testimonials[current].classList.remove('active');
+  current = (current + 1) % testimonials.length;
+  testimonials[current].classList.add('active');
+}, 4000);
+
+// Smooth scrolling for nav links
+document.querySelectorAll('nav ul li a').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    document.querySelector(link.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+    document.querySelectorAll('nav ul li a').forEach(l => l.classList.remove('active'));
+    link.classList.add('active');
+  });
+});
+</script>
+
+</body>
+</html>
