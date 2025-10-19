@@ -5,146 +5,81 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ExamStay – Less Stress, More Success</title>
 
-<!-- Google Fonts -->
+<meta name="description" content="ExamStay provides safe, affordable, and OYO-style stays near exam centers. Less Stress, More Success.">
+<meta name="keywords" content="ExamStay, student stay, OYO style rooms, exam accommodation, safe stay">
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-/* ====== ExamStay Dark Blue–Gold Theme (Fixed Version) ====== */
 * { margin:0; padding:0; box-sizing:border-box; }
-body {
-  font-family:'Poppins', sans-serif;
-  background: linear-gradient(to bottom right, #001f4d, #002b66);
-  color:white;
-  line-height:1.6;
-  scroll-behavior: smooth;
-}
-body::before {
-  content:"";
-  position: fixed;
-  top:0; left:0; width:100%; height:100%;
-  background-color: rgba(0,0,0,0.3);
-  z-index:-1;
-}
+body { font-family:'Poppins', sans-serif; background: linear-gradient(to bottom right, #001f4d, #002b66); color:white; line-height:1.6; scroll-behavior: smooth; }
+body::before { content:""; position: fixed; top:0; left:0; width:100%; height:100%; background-color: rgba(0,0,0,0.3); z-index:-1; }
 
-/* Navigation Bar */
-nav {
-  width:100%;
-  background: rgba(0,26,77,0.75); /* more transparent */
-  border-bottom: 2px solid #DAA520;
-  position: fixed;
-  top:0;
-  z-index:100;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:5px 20px; /* thinner */
-  box-shadow:0 3px 10px rgba(0,0,0,0.3);
-  backdrop-filter: blur(6px);
-}
+/* Navbar */
+nav { width:100%; background: rgba(0,26,77,0.75); border-bottom: 2px solid #DAA520; position: fixed; top:0; z-index:100; display:flex; justify-content:space-between; align-items:center; padding:5px 20px; box-shadow:0 3px 10px rgba(0,0,0,0.3); backdrop-filter: blur(6px); }
 nav .logo { max-width:80px; border-radius:8px; }
 nav ul { list-style:none; display:flex; }
 nav ul li { margin-left:18px; }
-nav ul li a {
-  color:white; text-decoration:none; font-weight:600;
-  padding:6px 12px; border-radius:5px; transition:0.3s;
-}
-nav ul li a:hover, nav ul li a.active {
-  background-color:#DAA520;
-  color:#001f4d;
-}
+nav ul li a { color:white; text-decoration:none; font-weight:600; padding:6px 12px; border-radius:5px; transition:0.3s; }
+nav ul li a:hover, nav ul li a.active { background-color:#DAA520; color:#001f4d; }
 
-/* Hero Section */
-.hero {
-  display:flex; flex-direction:column; justify-content:center; align-items:center;
-  min-height:100vh;
-  text-align:center; padding-top:100px;
-  opacity:0; transform:translateY(30px); transition:all 1s ease;
-}
+/* Hero */
+.hero { display:flex; flex-direction:column; justify-content:center; align-items:center; min-height:100vh; text-align:center; padding-top:100px; opacity:0; transform:translateY(30px); transition:all 1s ease; }
 .hero.visible { opacity:1; transform:translateY(0); }
 .hero h1 { font-size:2.8rem; margin-bottom:10px; text-shadow:2px 2px 6px rgba(0,0,0,0.7); }
 .hero h1 span { color:#DAA520; font-weight:700; }
 .hero p { font-size:1.4rem; max-width:600px; text-shadow:1px 1px 3px rgba(0,0,0,0.6); }
-.poster-img { width:90%; max-width:450px; margin:20px auto; border-radius:10px; box-shadow:0 0 20px rgba(0,0,0,0.5); }
+.poster-img { width:90%; max-width:450px; margin:20px auto; border-radius:10px; box-shadow:0 0 20px rgba(0,0,0,0.5); transition:0.4s; }
+.poster-img:hover { transform:scale(1.03); }
 
 /* Buttons */
-.btn {
-  display:inline-block;
-  margin-top:20px;
-  background-color:#DAA520;
-  color:#001f4d;
-  padding:12px 26px;
-  text-decoration:none;
-  font-size:18px;
-  border-radius:30px;
-  font-weight:600;
-  transition:0.4s;
-}
-.btn:hover {
-  background-color:white;
-  transform:scale(1.08);
-  box-shadow:0 5px 15px rgba(0,0,0,0.4);
-}
+.btn { display:inline-block; margin-top:20px; background-color:#DAA520; color:#001f4d; padding:14px 30px; text-decoration:none; font-size:18px; border-radius:30px; font-weight:700; transition:0.4s; }
+.btn:hover { background-color:white; transform:scale(1.08); box-shadow:0 5px 15px rgba(0,0,0,0.4); }
+
+/* Sections */
+section { padding:60px 20px; max-width:1000px; margin:0 auto; text-align:center; opacity:0; transform:translateY(30px); transition:all 1s ease; }
+section.visible { opacity:1; transform:translateY(0); }
+section h2 { color:#DAA520; margin-bottom:30px; font-size:2rem; }
+section p { font-size:1.2rem; line-height:1.6; color:white; }
+
+/* Rooms Cards */
+.room-cards { display:grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap:20px; margin-top:30px; }
+.room-card { background: rgba(0,26,77,0.85); border: 2px solid #DAA520; border-radius:12px; padding:20px; text-align:center; transition:0.4s; }
+.room-card:hover { transform:scale(1.05); box-shadow:0 8px 20px rgba(0,0,0,0.5); }
+.room-card img { width:60px; margin-bottom:15px; }
+.room-card h3 { color:#DAA520; margin-bottom:10px; }
+.room-card p { font-size:1rem; color:white; }
+
+/* Testimonial Slider */
+.testimonials { position:relative; margin-top:40px; padding:20px; border:2px solid #DAA520; border-radius:15px; background: rgba(0,26,77,0.8); max-width:700px; margin-left:auto; margin-right:auto; }
+.testimonial { display:none; font-size:1.1rem; color:white; }
+.testimonial.active { display:block; }
+.testimonial p { font-style:italic; margin-bottom:10px; }
+.testimonial strong { color:#DAA520; }
 
 /* CTA Banner */
-.cta-banner {
-  background: linear-gradient(to right, #DAA520, #ffd966);
-  color:#001f4d;
-  padding:18px;
-  border-radius:15px;
-  margin:30px auto;
-  max-width:600px;
-  font-size:1.1rem;
-  text-align:center;
-  box-shadow:0 0 15px rgba(0,0,0,0.4);
-  opacity:0; transform:translateY(30px); transition:all 1s ease;
-}
+.cta-banner { background: linear-gradient(to right, #DAA520, #ffd966); color:#001f4d; padding:18px; border-radius:15px; margin:30px auto; max-width:600px; font-size:1.1rem; text-align:center; box-shadow:0 0 15px rgba(0,0,0,0.4); opacity:0; transform:translateY(30px); transition:all 1s ease; }
 .cta-banner.visible { opacity:1; transform:translateY(0); }
-.cta-banner a {
-  display:inline-block;
-  margin-top:10px;
-  background-color:#001f4d;
-  color:white;
-  padding:10px 22px;
-  text-decoration:none;
-  border-radius:25px;
-  font-weight:700;
-  transition:0.4s;
-}
-.cta-banner a:hover {
-  background-color:#002b66;
-  transform:scale(1.1);
-  box-shadow:0 5px 15px rgba(0,0,0,0.3);
-}
+.cta-banner a { display:inline-block; margin-top:10px; background-color:#001f4d; color:white; padding:10px 22px; text-decoration:none; border-radius:25px; font-weight:700; transition:0.4s; }
+.cta-banner a:hover { background-color:#002b66; transform:scale(1.1); box-shadow:0 5px 15px rgba(0,0,0,0.3); }
 
 /* Footer */
-footer {
-  text-align:center;
-  margin-top:50px;
-  padding:15px;
-  background: rgba(0,26,77,0.95);
-  border-top:2px solid #DAA520;
-  color:white;
-  font-size:14px;
-}
+footer { text-align:center; margin-top:50px; padding:15px; background: rgba(0,26,77,0.95); border-top:2px solid #DAA520; color:white; font-size:14px; }
 footer a { color:#DAA520; text-decoration:none; margin:0 5px; }
 footer a:hover { color:white; }
 
-/* WhatsApp Floating Button */
+/* WhatsApp Floating */
 .whatsapp-float { position:fixed; bottom:20px; right:20px; z-index:150; }
 .whatsapp-float img { width:60px; filter: drop-shadow(0 0 5px black); }
 
 /* Responsive */
-@media(max-width:768px){
-  .hero h1{ font-size:2.2rem; }
-  .hero p{ font-size:1.1rem; }
-  .poster-img{ max-width:90%; }
-}
+@media(max-width:768px){ .hero h1{ font-size:2.2rem; } .hero p{ font-size:1.1rem; } .poster-img{ max-width:90%; } .room-cards { grid-template-columns:1fr; } }
 </style>
 </head>
 
 <body>
 
-<!-- Navigation -->
+<!-- Navbar -->
 <nav>
   <img src="logo1.png" alt="ExamStay Logo" class="logo">
   <ul>
@@ -159,43 +94,52 @@ footer a:hover { color:white; }
 <section class="hero" id="home">
   <h1>Welcome to <span>ExamStay</span></h1>
   <p>Less Stress, More Success</p>
-  <img src="study-room.jpg" alt="ExamStay Poster" class="poster-img">
+  <img src="study-room.jpg" alt="Student study room" class="poster-img" loading="lazy">
   <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeFBl1BJkSTJrs3wsbe9UJ50-f_qWBa-jEPEnbj4RHd_69eLQ/viewform?usp=pp_url" target="_blank">Book Now</a>
   <div class="founder">
     <p><strong>Founder:</strong> Sanjay & Sanjay</p>
   </div>
 </section>
 
-<!-- WhatsApp CTA -->
-<div class="cta-banner">
-  Need Help Booking? <br>
-  <a href="https://wa.me/919589693356" target="_blank">Chat on WhatsApp</a>
-</div>
+<!-- About -->
+<section id="about">
+  <h2>About ExamStay</h2>
+  <p>ExamStay provides safe, affordable, and OYO-style accommodations near exam centers. Clean rooms, Wi-Fi, study-friendly environment, and 24/7 student support.</p>
+</section>
 
-<!-- Footer -->
-<footer>
-  <p>
-    <a href="privacy.html">Privacy Policy</a> |
-    <a href="contact.html">Contact Us</a> |
-    <a href="refund.html">Refund & Cancellation</a>
-  </p>
-</footer>
+<!-- Rooms -->
+<section id="rooms">
+  <h2>Our Rooms & Facilities</h2>
+  <div class="room-cards">
+    <div class="room-card">
+      <img src="https://img.icons8.com/ios-filled/50/DAA520/bed.png" alt="Single Room">
+      <h3>Single Room</h3>
+      <p>Private bed, study desk, clean environment. Available Now.</p>
+    </div>
+    <div class="room-card">
+      <img src="https://img.icons8.com/ios-filled/50/DAA520/people.png" alt="Shared Room">
+      <h3>Shared Room</h3>
+      <p>Shared space with comfort and Wi-Fi. Available Now.</p>
+    </div>
+    <div class="room-card">
+      <img src="https://img.icons8.com/ios-filled/50/DAA520/wifi.png" alt="Wi-Fi">
+      <h3>High-Speed Wi-Fi</h3>
+      <p>Stay connected anytime. Study efficiently. Available Now.</p>
+    </div>
+    <div class="room-card">
+      <img src="https://img.icons8.com/ios-filled/50/DAA520/safe-box.png" alt="Locker">
+      <h3>Safe Lockers</h3>
+      <p>Keep your belongings secure. Available Now.</p>
+    </div>
+  </div>
 
-<!-- WhatsApp Floating Icon -->
-<a href="https://wa.me/919589693356" target="_blank" class="whatsapp-float">
-  <img src="https://img.icons8.com/color/96/25D366/whatsapp--v1.png" alt="WhatsApp Chat">
-</a>
-
-<!-- Scroll animation -->
-<script>
-const sections = document.querySelectorAll('section, .cta-banner');
-const observer = new IntersectionObserver((entries)=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){ entry.target.classList.add('visible'); }
-  });
-},{threshold:0.2});
-sections.forEach(section=>observer.observe(section));
-</script>
-
-</body>
-</html>
+  <!-- Testimonial Slider -->
+  <div class="testimonials">
+    <div class="testimonial active">
+      <p>"ExamStay made my exam stay stress-free and comfortable!"</p>
+      <strong>- Rahul S.</strong>
+    </div>
+    <div class="testimonial">
+      <p>"Friendly staff, clean rooms, and excellent location."</p>
+      <strong>- Priya M.</strong>
+    </div>
