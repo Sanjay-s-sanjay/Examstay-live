@@ -70,10 +70,6 @@ section p { font-size:1.2rem; line-height:1.6; color:white; }
 .cta-banner a { display:inline-block; margin-top:10px; background-color:#001f4d; color:white; padding:10px 22px; text-decoration:none; border-radius:25px; font-weight:700; transition:0.4s; }
 .cta-banner a:hover { background-color:#002b66; transform:scale(1.1); box-shadow:0 5px 15px rgba(0,0,0,0.3); }
 
-/* Trust & Policies */
-#trust-policies { padding:60px 20px; max-width:1000px; margin:0 auto; text-align:center; opacity:0; transform:translateY(30px); transition:all 1s ease; }
-#trust-policies.visible { opacity:1; transform:translateY(0); }
-
 /* Footer */
 footer { text-align:center; margin-top:50px; padding:15px; background: rgba(0,26,77,0.95); border-top:2px solid #DAA520; color:white; font-size:14px; }
 footer a { color:#DAA520; text-decoration:none; margin:0 5px; }
@@ -101,15 +97,16 @@ footer a:hover { color:white; }
   <ul>
     <li><a href="#home" class="nav-link active">Home</a></li>
     <li><a href="#about" class="nav-link">About</a></li>
+    <li><a href="#mission" class="nav-link">Mission</a></li>
     <li><a href="#rooms" class="nav-link">Rooms</a></li>
     <li><a href="#trust-policies" class="nav-link">Trust</a></li>
+    <li><a href="#founder" class="nav-link">Founder</a></li>
     <li><a href="#contact" class="nav-link">Contact</a></li>
   </ul>
 </nav>
 
 <!-- Hero -->
 <section class="hero" id="home">
-  <!-- City Selector -->
   <div class="city-banner">
     <button class="city-btn" data-city="indore">Indore</button>
     <button class="city-btn" data-city="bhopal">Bhopal</button>
@@ -120,7 +117,7 @@ footer a:hover { color:white; }
     <button class="city-btn" data-city="all">All India</button>
   </div>
 
-  <div id="area-indore" class="area-list">
+  <div id="area-indore" class="area-list active">
     <span>Indore Areas:</span> Vijay Nagar, Scheme No. 78, MR 10, Palasia, Bhanwarkua, Rajendra Nagar, Rau, LIG, Pipliyana, Bangali Square, Dewas Naka
   </div>
   <div id="area-bhopal" class="area-list">
@@ -146,9 +143,6 @@ footer a:hover { color:white; }
   <p>Less Stress, More Success</p>
   <img src="study-room.jpg" alt="Student study room" class="poster-img" loading="lazy">
   <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeFBl1BJkSTJrs3wsbe9UJ50-f_qWBa-jEPEnbj4RHd_69eLQ/viewform?usp=pp_url" target="_blank">Book Now</a>
-  <div class="founder">
-    <p><strong>Founder:</strong> Sanjay & Sanjay</p>
-  </div>
   <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLScxShkAp35mO77i09yRgjl9tVcePJbnI0UpP4cBA3EyNVDymw/viewform?usp=header" target="_blank">Join as Host</a>
 </section>
 
@@ -156,6 +150,12 @@ footer a:hover { color:white; }
 <section id="about">
   <h2>About ExamStay</h2>
   <p>ExamStay provides safe, affordable, and accommodations near exam centers. Clean rooms, Wi-Fi, study-friendly environment, and 24/7 student support.</p>
+</section>
+
+<!-- Mission -->
+<section id="mission">
+  <h2>Our Mission</h2>
+  <p>At ExamStay, our mission is to provide students with safe, affordable, and comfortable stays near exam centers. We aim to reduce stress, help you focus on your studies, and ensure a smooth, secure experience.</p>
 </section>
 
 <!-- Rooms -->
@@ -227,6 +227,12 @@ footer a:hover { color:white; }
   <a href="https://docs.google.com/forms/d/e/1FAIpQLSeFBl1BJkSTJrs3wsbe9UJ50-f_qWBa-jEPEnbj4RHd_69eLQ/viewform?usp=pp_url" target="_blank">Book Now</a>
 </section>
 
+<!-- Founder -->
+<section id="founder">
+  <h2>Meet the Founders</h2>
+  <p><strong>Founders:</strong> Sanjay & Sanjay</p>
+</section>
+
 <!-- Contact -->
 <section id="contact">
   <h2>Contact Us</h2>
@@ -243,5 +249,4 @@ footer a:hover { color:white; }
 </section>
 
 <!-- WhatsApp Floating -->
-<a href="https://wa.me/9589693356" class="whatsapp-float" target="_blank">
-  <img src="https://img.icons8.com/color/96/000000/whatsapp.png" alt="Whats
+<a href="https://wa.me/9589693356
