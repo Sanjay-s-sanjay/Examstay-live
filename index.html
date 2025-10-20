@@ -21,66 +21,36 @@ nav ul li { margin-left:18px; }
 nav ul li a { color:#001f4d; text-decoration:none; font-weight:600; padding:6px 12px; border-radius:5px; transition:0.3s; }
 nav ul li a:hover, nav ul li a.active { background-color:#DAA520; color:white; }
 
-/* Hero Banner */
+/* Hero Banner Full Width */
 .hero-banner {
   position: relative;
   width: 100%;
   height: 80vh;
   overflow: hidden;
 }
-
 .hero-banner img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
-
 .hero-banner .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 0; left: 0; width: 100%; height: 100%;
   background: rgba(0,0,0,0.4);
 }
-
 .banner-text {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top:50%;
+  left:50%;
   transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
+  text-align:center;
+  color:white;
 }
-
-.banner-text h1 {
-  font-size: 3em;
-  margin-bottom: 15px;
-  text-shadow: 1px 1px 8px rgba(0,0,0,0.7);
-}
-
-.banner-text p {
-  font-size: 1.5em;
-  margin-bottom: 25px;
-  text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
-}
-
-.book-now-btn {
-  display: inline-block;
-  margin: 5px;
-  padding: 12px 30px;
-  background-color: #ff5722;
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background 0.3s;
-}
-
-.book-now-btn:hover {
-  background-color: #e64a19;
-}
+.banner-text h1 { font-size:3em; margin-bottom:15px; text-shadow:1px 1px 8px rgba(0,0,0,0.7);}
+.banner-text p { font-size:1.5em; margin-bottom:25px; text-shadow:1px 1px 6px rgba(0,0,0,0.6);}
+.book-now-btn { display:inline-block; margin:5px; padding:12px 30px; background-color:#ff5722; color:white; font-weight:bold; text-decoration:none; border-radius:5px; transition:0.3s;}
+.book-now-btn:hover { background-color:#e64a19;}
 
 /* City Selector */
 .city-banner { display:flex; flex-wrap:wrap; justify-content:center; gap:12px; margin-top:20px; }
@@ -107,6 +77,7 @@ section h2 { color:#DAA520; margin-bottom:20px; font-size:2rem; }
 
 /* Footer */
 footer { text-align:center; margin-top:50px; padding:15px; background: #ffffff; border-top:2px solid #DAA520; color:#001f4d; font-size:14px; box-shadow:0 -3px 10px rgba(0,0,0,0.05);}
+footer p { margin-top:10px; color:#001f4d;}
 .social-icons a img { width:28px; margin:0 6px; }
 
 /* WhatsApp Floating */
@@ -154,6 +125,7 @@ footer { text-align:center; margin-top:50px; padding:15px; background: #ffffff; 
     </div>
   </div>
 
+  <!-- City Selector -->
   <div class="city-banner">
     <button class="city-btn" data-city="indore">Indore</button>
     <button class="city-btn" data-city="bhopal">Bhopal</button>
@@ -163,7 +135,7 @@ footer { text-align:center; margin-top:50px; padding:15px; background: #ffffff; 
   </div>
 
   <div id="area-indore" class="area-list active">
-    <span>Indore Areas:</span> Vijay Nagar, Scheme No. 78, MR 10, Palasia, Bhanwarkua, Rajendra Nagar, Rau, LIG, Pipliyana
+    <span>Indore Areas:</span> Vijay Nagar, Scheme No. 78, MR 10, Palasia, Bhanwarkua, Rajendra Nagar, Rau, LIG, Pipliyahana
   </div>
   <div id="area-bhopal" class="area-list"><span>Bhopal:</span> MP Nagar, Arera Colony, Kolar</div>
   <div id="area-jaipur" class="area-list"><span>Jaipur:</span> Vaishali Nagar, Mansarovar</div>
@@ -224,7 +196,7 @@ footer { text-align:center; margin-top:50px; padding:15px; background: #ffffff; 
   <p>Website: <a href="https://sanjay-s-sanjay.github.io/Examstay-live/" style="color:#DAA520;">ExamStay Live</a></p>
   <div class="social-icons">
     <a href="https://instagram.com/examstay_india" target="_blank"><img src="https://img.icons8.com/color/48/instagram-new.png" alt="Instagram"></a>
-    <a  href="https://facebook.com/sanjaysiloriya" target="_blank"><img src="https://img.icons8.com/color/48/facebook-icons.png" alt="Facebook"></a>               
+    <a href="https://facebook.com/sanjaysiloriya" target="_blank"><img src="https://img.icons8.com/color/48/facebook-icons.png" alt="Facebook"></a>               
     <a href="https://twitter.com/Siloriyasa12345" target="_blank"><img src="https://img.icons8.com/color/48/twitter--v1.png" alt="Twitter"></a>
     <a href="https://youtube.com/@ExamStayIndia" target="_blank"><img src="https://img.icons8.com/color/48/youtube-play.png" alt="YouTube"></a>
   </div>
@@ -234,6 +206,11 @@ footer { text-align:center; margin-top:50px; padding:15px; background: #ffffff; 
 <div class="whatsapp-float">
   <a href="https://wa.me/9589693356" target="_blank"><img src="https://img.icons8.com/color/96/whatsapp.png" alt="WhatsApp"></a>
 </div>
+
+<!-- Footer -->
+<footer>
+  <p>© 2025 ExamStay. All Rights Reserved.</p>
+</footer>
 
 <!-- JS -->
 <script>
