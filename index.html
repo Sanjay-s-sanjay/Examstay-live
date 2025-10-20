@@ -21,12 +21,66 @@ nav ul li { margin-left:18px; }
 nav ul li a { color:#001f4d; text-decoration:none; font-weight:600; padding:6px 12px; border-radius:5px; transition:0.3s; }
 nav ul li a:hover, nav ul li a.active { background-color:#DAA520; color:white; }
 
-/* Hero */
-.hero { display:flex; flex-direction:column; justify-content:center; align-items:center; min-height:100vh; text-align:center; padding-top:120px; }
-.hero h1 { font-size:2.8rem; margin-bottom:10px; }
-.hero h1 span { color:#DAA520; font-weight:700; }
-.hero p { font-size:1.4rem; max-width:600px; }
-.poster-img { width:90%; max-width:450px; margin:20px auto; border-radius:10px; box-shadow:0 0 15px rgba(0,0,0,0.1); }
+/* Hero Banner */
+.hero-banner {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.hero-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-banner .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.banner-text h1 {
+  font-size: 3em;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 8px rgba(0,0,0,0.7);
+}
+
+.banner-text p {
+  font-size: 1.5em;
+  margin-bottom: 25px;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
+}
+
+.book-now-btn {
+  display: inline-block;
+  margin: 5px;
+  padding: 12px 30px;
+  background-color: #ff5722;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.book-now-btn:hover {
+  background-color: #e64a19;
+}
 
 /* City Selector */
 .city-banner { display:flex; flex-wrap:wrap; justify-content:center; gap:12px; margin-top:20px; }
@@ -35,10 +89,6 @@ nav ul li a:hover, nav ul li a.active { background-color:#DAA520; color:white; }
 .area-list { display:none; margin-top:15px; text-align:center; max-width:700px; background: #ffffff; padding:15px; border-radius:12px; box-shadow:0 5px 15px rgba(0,0,0,0.05); color:#001f4d; }
 .area-list.active { display:block; }
 .area-list span { color:#DAA520; font-weight:600; }
-
-/* Buttons */
-.btn { display:inline-block; margin-top:20px; background-color:#DAA520; color:white; padding:12px 28px; text-decoration:none; font-size:18px; border-radius:30px; font-weight:700; transition:0.3s; }
-.btn:hover { background-color:#e6c85d; color:#001f4d; transform:scale(1.05); }
 
 /* Sections */
 section { padding:70px 20px; max-width:1000px; margin:0 auto; text-align:center; }
@@ -64,7 +114,15 @@ footer { text-align:center; margin-top:50px; padding:15px; background: #ffffff; 
 .whatsapp-float img { width:60px; filter: drop-shadow(0 0 5px rgba(0,0,0,0.2)); }
 
 /* Responsive */
-@media(max-width:768px){ .hero h1{font-size:2.2rem;} .hero p{font-size:1.1rem;} }
+@media(max-width:1024px){
+  .banner-text h1 { font-size:2.5em; }
+  .banner-text p { font-size:1.2em; }
+}
+@media(max-width:768px){
+  .banner-text h1 { font-size:2em; }
+  .banner-text p { font-size:1em; }
+  .book-now-btn { padding:10px 25px; }
+}
 </style>
 </head>
 <body>
@@ -83,8 +141,19 @@ footer { text-align:center; margin-top:50px; padding:15px; background: #ffffff; 
   </ul>
 </nav>
 
-<!-- Hero -->
-<section class="hero" id="home">
+<!-- Hero Banner -->
+<section id="home">
+  <div class="hero-banner">
+    <img src="study-room.jpg" alt="ExamStay Poster">
+    <div class="overlay"></div>
+    <div class="banner-text">
+      <h1>Less Stress, More Success</h1>
+      <p>Safe & Affordable Stays Near Exam Centers</p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeFBl1BJkSTJrs3wsbe9UJ50-f_qWBa-jEPEnbj4RHd_69eLQ/viewform?usp=pp_url" class="book-now-btn" target="_blank">Book Your Stay</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScxShkAp35mO77i09yRgjl9tVcePJbnI0UpP4cBA3EyNVDymw/viewform?usp=header" class="book-now-btn" target="_blank">Join as Host</a>
+    </div>
+  </div>
+
   <div class="city-banner">
     <button class="city-btn" data-city="indore">Indore</button>
     <button class="city-btn" data-city="bhopal">Bhopal</button>
@@ -98,14 +167,8 @@ footer { text-align:center; margin-top:50px; padding:15px; background: #ffffff; 
   </div>
   <div id="area-bhopal" class="area-list"><span>Bhopal:</span> MP Nagar, Arera Colony, Kolar</div>
   <div id="area-jaipur" class="area-list"><span>Jaipur:</span> Vaishali Nagar, Mansarovar</div>
-  <div id="area-Gwalior" class="area-list"><span>Gwalior:</span> lashkar,Morar,Phoolbagh, Gwaliorfort</div>
+  <div id="area-Gwalior" class="area-list"><span>Gwalior:</span> Lashkar, Morar, Phoolbagh, Gwaliorfort</div>
   <div id="area-all" class="area-list"><span>All India:</span> Explore all cities</div>
-
-  <h1>Welcome to <span>ExamStay</span></h1>
-  <p>Less Stress, More Success</p>
-  <img src="study-room.jpg" alt="ExamStay Poster" class="poster-img">
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLSeFBl1BJkSTJrs3wsbe9UJ50-f_qWBa-jEPEnbj4RHd_69eLQ/viewform?usp=pp_url" class="btn" target="_blank">Book Now</a>
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLScxShkAp35mO77i09yRgjl9tVcePJbnI0UpP4cBA3EyNVDymw/viewform?usp=header" class="btn" target="_blank">Join as Host</a>
 </section>
 
 <!-- About -->
