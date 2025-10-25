@@ -77,6 +77,7 @@ footer a:hover { text-decoration:underline; }
     <li><a href="#about">About</a></li>
     <li><a href="#mission">Mission</a></li>
     <li><a href="#rooms">Rooms</a></li>
+    <li><a href="#transportmeals">Transport & Meals</a></li>
     <li><a href="#trust">Trust</a></li>
     <li><a href="#founder">Founder</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -135,6 +136,21 @@ footer a:hover { text-decoration:underline; }
   </div>
 </section>
 
+<!-- Transport & Meals -->
+<section id="transportmeals">
+  <h2>Transport & Meals (Optional)</h2>
+  <div class="room-cards">
+    <div class="room-card">
+      <h3>Transport Options</h3>
+      <p>Choose from: Rapido, Uber, ExamStay Transport</p>
+    </div>
+    <div class="room-card">
+      <h3>Meals Options</h3>
+      <p>Choose from: Zomato, Swiggy, ExamStay Meals</p>
+    </div>
+  </div>
+</section>
+
 <!-- Trust -->
 <section id="trust">
   <h2>Our Trust & Policies</h2>
@@ -178,51 +194,4 @@ footer a:hover { text-decoration:underline; }
 <!-- JS -->
 <script>
 const buttons = document.querySelectorAll('.city-btn');
-const areas = document.querySelectorAll('.area-list');
-buttons.forEach(btn => {
-  btn.addEventListener('click', ()=>{
-    areas.forEach(a => a.classList.remove('active'));
-    document.getElementById('area-'+btn.dataset.city).classList.add('active');
-  });
-});
-</script>
-
-<!-- Footer -->
-<footer>
-  <div style="max-width:1200px; margin:auto; display:flex; flex-wrap:wrap; justify-content:space-around; text-align:left;">
-    
-    <!-- Column 1: Quick Links -->
-    <div style="margin:10px;">
-      <h3>Quick Links</h3>
-      <ul style="list-style:none; padding:0;">
-        <li><a href="#">Stay Hosts</a></li>
-        <li><a href="#">Transport / Pickup</a></li>
-        <li><a href="#">Report Issue</a></li>
-      </ul>
-    </div>
-
-    <!-- Column 2: Policies -->
-    <div style="margin:10px;">
-      <h3>Policies</h3>
-      <ul style="list-style:none; padding:0;">
-        <li><a href="privacy.html" target="_blank">Privacy Policy</a></li>
-        <li><a href="terms.html" target="_blank">Terms & Conditions</a></li>
-        <li><a href="refund.html" target="_blank">Refund & Cancellation Policy</a></li>
-      </ul>
-    </div>
-
-    <!-- Column 3: Support -->
-    <div style="margin:10px;">
-      <h3>Support</h3>
-      <ul style="list-style:none; padding:0;">
-        <li><a href="mailto:support@examstay.com">Email Support</a></li>
-        <li><a href="https://wa.me/919589693356">WhatsApp / Call</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <p style="text-align:center; margin-top:20px; font-size:14px;">&copy; 2025 ExamStay. All rights reserved.</p>
-</footer>
-
-</body>
-</html>
+const areas = document.querySelectorAll('.area
